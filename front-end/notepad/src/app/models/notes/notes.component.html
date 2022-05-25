@@ -1,0 +1,29 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="">Welcome to Notepad App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="create">Create Note</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="alert alert-warning">
+        <div *ngFor="let items of items">
+                    <div class="alert alert-primary">Id: {{items._id}}
+                    <div class="alert alert-success">title: {{items.title}}
+                        <p>description: {{items.description}} <br> Date: {{items.date}}</p>
+                    </div>
+                  </div>
+        </div>
+    </div>
+</div>
