@@ -19,11 +19,12 @@
       </nav>
     <div class="alert alert-warning">
         <div *ngFor="let items of items">
-                    <div class="alert alert-primary">Id: {{items._id}}
-                    <div class="alert alert-success">title: {{items.title}}
+                    <div class="alert alert-primary"><h4>Title:{{items.title}}</h4>
+                    <div class="alert alert-success">
                         <p>description: {{items.description}} <br> Date: {{items.date}}</p>
                     </div>
-                  </div>
+                    <button (click)="deleteEmp(items._id); $event.stopPropagation()" onClick="window.location.reload();" class="btn btn-danger">Delete</button>
+              </div>
         </div>
     </div>
 </div>

@@ -19,10 +19,18 @@ export class NotesService {
         (error) => console.log(error)
       );
   }
-  getNotes(): Observable<notes[]> {
-    return this._http.get<notes[]>(
+  getNotes(): Observable<any> {
+    return this._http.get<any>(
       'http://localhost:8080/'
     );
   }
-  
+  deleteNote(id:number):Observable<any>{
+    return this._http.delete(`http://localhost:8080/deletenoteById/${id}`)
+  }
+
+  getNoteByID(id:number): Observable<any> {
+    return this._http.get<any>(
+      `http://localhost:8080/getNoteByID/${id}`
+    );
+  }
 }
